@@ -8,11 +8,16 @@
             {
                 return "FIZZ";
             }
+            else if (nummer % 5 == 0)
+            {
+               return "BUZZ";
+            }
             else
             {
                 return nummer.ToString();
             }
-            
+
+
         }
     }
 }
