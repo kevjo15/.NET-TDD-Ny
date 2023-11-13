@@ -13,9 +13,10 @@ namespace FizzBuzz_Test
             int randomNummer = 0;
 
             // Act
-            Kalkylator.FizzBuzzKalkyl(randomNummer);
+            string result = Kalkylator.FizzBuzzKalkyl(randomNummer);
 
-            // Testet kommer att bli grönt då ett NotImplementedException kastas
+            // Assert
+            Assert.Equals("FIZZ", result);
         }
     }
 }

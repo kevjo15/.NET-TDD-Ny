@@ -4,7 +4,15 @@
     {
         public static void FizzBuzzKalkyl(int nummer)
         {
-            throw new NotImplementedException();
+            if(nummer % 3 == 0)
+            {
+                return "FIZZ";
+            }
+            else
+            {
+                return nummer.ToString();
+            }
+            
         }
     }
 }
