@@ -4,7 +4,12 @@
     {
         public static string FizzBuzzKalkyl(int nummer)
         {
-            if (nummer % 3 == 0)
+            if (nummer % 3 == 0 && nummer % 5 == 0)
+            {
+                return "FizzBuzz";
+
+            }
+            else if (nummer % 3 == 0)
             {
                 return "FIZZ";
             }
@@ -12,11 +17,7 @@
             {
                 return "BUZZ";
             }
-            else if (nummer % 3 == 0 && nummer % 5 == 0)
-            {
-                return "FizzBuzz";
-
-            }
+            
 
             else
             {
