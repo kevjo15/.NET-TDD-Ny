@@ -38,7 +38,38 @@ namespace FizzBuzz_Test
 
         }
 
+        [TestMethod]
+        public void TestFizzBuzzKalkylMedInput_WithValidNumber_ShouldPrintFizzBuzz()
+        {
+            // Arrange
+            string userInput = "15";
+            string expectedOutput = "FizzBuzz";
 
+            // Omdirigera konsoloutputen till en StringWriter
+            using (StringWriter sw = new StringWriter())
+            {
+                Console.SetOut(sw);
+
+                // Act
+                Kalkylator.FizzBuzzKalkylMedInput(userInput);
+
+                // Hämta den fångade konsoloutputen och trimma bort eventuella extra mellanslag eller radbrytningar
+                string result = sw.ToString().Trim();
+
+                // Assert
+                Assert.AreEqual(expectedOutput, result);
+            }
+        }
+
+        [TestMethod]
+        public void TestFizzBuzzKalkylMedInput_WithNonNumber_ShouldThrowArgumentException()
+        {
+            // Arrange
+            string userInput = "abc";
+
+            // Act & Assert
+            Assert.ThrowsException<ArgumentException>(() => Kalkylator.FizzBuzzKalkylMedInput(userInput));
+        }
 
     }
 }

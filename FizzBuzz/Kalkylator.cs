@@ -46,6 +46,34 @@
             Console.WriteLine(FizzBuzzKalkyl(nummer));
         }
 
-
+        public static void FizzBuzzKalkylMedInput(string userInput)
+        {
+            if (int.TryParse(userInput, out int nummer))
+            {
+                if (nummer % 3 == 0 && nummer % 5 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (nummer % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if (nummer % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else
+                {
+                    Console.WriteLine(nummer);
+                }
+            }
+            else
+            {
+                throw new ArgumentException($"{userInput} är inte ett nummer");
+            }
+        }
     }
+
+
 }
+
