@@ -15,7 +15,12 @@ namespace FizzBuzz_Test
             string result = Kalkylator.FizzBuzzKalkyl(randomNummer);
 
             // Assert
-            Assert.AreEqual("FIZZ", result);
+            Assert.AreEqual("FizzBuzz", result);
+         
+
         }
+
+
+
     }
 }
